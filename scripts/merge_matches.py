@@ -62,7 +62,7 @@ def main():
             # Fetching results ensures the query execution finishes completely
             try:
                 results = cursor.fetchall()
-                print(f"Statement {statement_num} executed successfully. Status: {cursor.statusmessage}")
+                print(f"Statement {statement_num} executed successfully. Query ID: {cursor.sfqid}")
             except Exception as stmt_err:
                 print(f"Error executing statement {statement_num}: {stmt_err}", file=sys.stderr)
                 sys.exit(1)
