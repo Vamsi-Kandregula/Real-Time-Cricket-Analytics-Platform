@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_cricket_matches
+    description: "Deduplicated cricket matches staging table"
+
+    columns:
+      - name: MATCH_ID
+        description: "Unique identifier for each match"
+        tests:
+          - unique
+          - not_null
+
+      - name: TEAM_1
+        description: "First team name"
+        tests:
+          - not_null
+
+      - name: TEAM_2
+        description: "Second team name"
+        tests:
+          - not_null
+
+      - name: MATCH_DATE
+        description: "Date of the match"
+        tests:
+          - not_null

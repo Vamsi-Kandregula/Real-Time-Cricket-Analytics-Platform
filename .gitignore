@@ -1,0 +1,17 @@
+# DBT Build Artifacts and Logs
+target/
+dbt_packages/
+logs/
+
+# Python Virtual Environments
+venv/
+.venv/
+env/
+.env
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Local Snowflake/DBT Profiles (Contains secrets)
+profiles.yml

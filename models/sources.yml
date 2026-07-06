@@ -1,0 +1,11 @@
+version: 2
+
+sources: 
+     - name: cricket
+       database: CRICKET_DB
+       schema: CRICKET_SCHEMA
+       tables: 
+          - name: CRICKET_MATCHES
+
+
+          
