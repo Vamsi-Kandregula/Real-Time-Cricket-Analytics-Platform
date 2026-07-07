@@ -159,4 +159,4 @@ Vite will launch the dashboard on `http://localhost:5173`.
 ---
 
 ## ⚠️ Disclaimer
-This dashboard UI website was created with the help of AI coding assistants. All other data engineering topics, including the CricAPI ingestion, AWS S3 staging directory structures, Databricks Spark notebooks, Snowflake Storage Integrations, and pipelines orchestration, were designed and implemented independently on our own.
+This dashboard UI website was created with the help of AI coding assistants. All other data engineering topics, including the CricAPI ingestion, AWS S3 staging directory structures, Databricks Spark notebooks, Snowflake Storage Integrations, and pipelines orchestration, were independently designed, implemented, and integrated by me.
