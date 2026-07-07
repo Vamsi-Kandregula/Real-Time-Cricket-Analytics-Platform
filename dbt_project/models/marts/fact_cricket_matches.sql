@@ -47,6 +47,12 @@ SELECT
         WHEN STATUS ILIKE '%won the super over%'
             THEN 'Completed'
 
+        WHEN STATUS ILIKE '%tied%' OR STATUS ILIKE '%tie%' OR STATUS ILIKE '%draw%'
+            THEN 'Completed'
+
+        WHEN MATCHENDED = TRUE
+            THEN 'Completed'
+
         WHEN STATUS ILIKE '%abandoned%'
             THEN 'Abandoned'
 
