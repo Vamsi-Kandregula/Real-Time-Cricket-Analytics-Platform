@@ -4,7 +4,7 @@
 [![DBT Core](https://img.shields.io/badge/dbt-v1.8+-orange?style=for-the-badge&logo=dbt)](https://github.com/Vamsi-Kandregula/Real-Time-Cricket-Analytics-Platform)
 [![Databricks](https://img.shields.io/badge/Databricks-Spark-red?style=for-the-badge&logo=databricks)](https://github.com/Vamsi-Kandregula/Real-Time-Cricket-Analytics-Platform/blob/main/scripts/databricks_clean_notebook.py)
 [![Snowflake DWH](https://img.shields.io/badge/Snowflake-DWH-blue?style=for-the-badge&logo=snowflake)](https://github.com/Vamsi-Kandregula/Real-Time-Cricket-Analytics-Platform/blob/main/sql/snowflake_setup.sql)
-[![React 19](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://github.com/Vamsi-Kandregula/Criket-FD)
+[![React 19](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://github.com/Vamsi-Kandregula/chronicle-live)
 
 A premium, production-grade SaaS sports analytics platform that automates live cricket matches data ingestion, processes it on a distributed Spark cluster, builds unified data warehouse schemas with **dbt**, and serves real-time KPIs over an optimized API to a stunning glassmorphic dashboard.
 
@@ -16,7 +16,7 @@ We have deployed the entire stack. You can access the live dashboards and code b
 
 | Component | Hosted Deployment URL | Source Code Repository |
 | :--- | :--- | :--- |
-| **🎨 React Frontend UI** | [chronicle-live.vercel.app](https://chronicle-live.vercel.app) | [Vamsi-Kandregula/Criket-FD](https://github.com/Vamsi-Kandregula/Criket-FD) |
+| **🎨 React Frontend UI** | [chronicle-live.vercel.app](https://chronicle-live.vercel.app) | [Vamsi-Kandregula/chronicle-live](https://github.com/Vamsi-Kandregula/chronicle-live) |
 | **⚙️ Node.js API Backend** | [cricket-bd.vercel.app/api-docs](https://cricket-bd.vercel.app/api-docs) | [Vamsi-Kandregula/Cricket-BD](https://github.com/Vamsi-Kandregula/Cricket-BD) |
 | **🚀 Data Pipeline & DBT** | *Scheduled via GitHub Actions* | [Vamsi-Kandregula/Real-Time-Cricket-Analytics-Platform](https://github.com/Vamsi-Kandregula/Real-Time-Cricket-Analytics-Platform) |
 
@@ -110,7 +110,7 @@ dbt transforms raw records in Snowflake through three clean stages:
   * Connects to Snowflake using the `snowflake-sdk`.
   * Exposes the endpoints like `GET /api/dashboard` which queries the DBT mart table `MART_DASHBOARD_SUMMARY`.
   * Integrates Swagger OpenAPI interactive documentation for developer tests.
-* **React Dashboard ([Criket-FD](file:///c:/Users/yamin/OneDrive/my%20projects/Criket-FD))**:
+* **React Dashboard ([chronicle-live](file:///c:/Users/yamin/OneDrive/my%20projects/Criket-FD))**:
   * Built using **React 19**, **Vite 8**, **Tailwind CSS**, and **Framer Motion** (for smooth glassmorphic interface micro-animations).
   * Uses **TanStack React Query** for robust network requests, polling, and auto-retries on database offline warnings.
   * Embeds **Apache ECharts** for premium, clean sports charts and data visualizations.
@@ -150,7 +150,7 @@ npm run dev
 ### 3. React Frontend Website
 Navigate to the frontend directory, configure `.env` endpoints, and run Vite dev server:
 ```bash
-cd Criket-FD
+cd chronicle-live
 npm install
 npm run dev
 ```
