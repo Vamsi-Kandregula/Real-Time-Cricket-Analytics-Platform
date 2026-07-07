@@ -115,8 +115,8 @@ dbt transforms raw records in Snowflake through three clean stages:
   * Uses **TanStack React Query** for robust network requests, polling, and auto-retries on database offline warnings.
   * Embeds **Apache ECharts** for premium, clean sports charts and data visualizations.
 
-### 📈 Dynamic Analytics & Data Visualization
-![ECharts Data Visualizations](assets/analytics_charts.png)
+### 📈 Dynamic Analytics & Venue Geolocations
+![Dynamic Analytics & Venue Geolocations](assets/analytics_charts.png)
 
 ### ⚙️ Ingestion Telemetry & Pipeline Monitor
 ![Pipeline Telemetry Monitor](assets/pipeline_monitor.png)
@@ -155,3 +155,8 @@ npm install
 npm run dev
 ```
 Vite will launch the dashboard on `http://localhost:5173`.
+
+---
+
+## ⚠️ Disclaimer
+This dashboard UI website was created with the help of AI coding assistants. All other data engineering topics, including the CricAPI ingestion, AWS S3 staging directory structures, Databricks Spark notebooks, Snowflake Storage Integrations, and pipelines orchestration, were designed and implemented independently on our own.
