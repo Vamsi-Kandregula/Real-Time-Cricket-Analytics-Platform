@@ -13,14 +13,14 @@ with DAG(
     dbt_run = BashOperator(
         task_id="dbt_run",
         bash_command="""
-        cd /opt/airflow/dags/dbt_cricket_project && dbt run
+        cd /opt/airflow/dags/dbt_cricket_project/dbt_project && dbt run
         """
     )
 
     dbt_test = BashOperator(
         task_id="dbt_test",
         bash_command="""
-        cd /opt/airflow/dags/dbt_cricket_project && dbt test
+        cd /opt/airflow/dags/dbt_cricket_project/dbt_project && dbt test
         """
     )
 

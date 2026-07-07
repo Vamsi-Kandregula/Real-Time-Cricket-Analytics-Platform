@@ -28,7 +28,7 @@ jobs:
 
       - name: Generate DBT profiles.yml
         run: |
-          cat << 'EOF' > profiles.yml
+          cat << 'EOF' > dbt_project/profiles.yml
           ${{ secrets.DBT_PROFILES_YML }}
           EOF
 

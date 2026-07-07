@@ -5,18 +5,19 @@ import subprocess
 def main():
     # Resolve the project root (parent directory of 'scripts')
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    dbt_dir = os.path.join(project_root, "dbt_project")
     
     print("Running dbt...")
     
     # 1. dbt run
     cmd_run = ["dbt", "run", "--profiles-dir", "."]
-    print(f"Executing: {' '.join(cmd_run)} in {project_root}")
+    print(f"Executing: {' '.join(cmd_run)} in {dbt_dir}")
     
     try:
         # Running synchronously and directing stdout/stderr to the console
         result_run = subprocess.run(
             cmd_run,
-            cwd=project_root,
+            cwd=dbt_dir,
             check=True
         )
         print("dbt run completed successfully.")
@@ -31,12 +32,12 @@ def main():
     
     # 2. dbt test
     cmd_test = ["dbt", "test", "--profiles-dir", "."]
-    print(f"Executing: {' '.join(cmd_test)} in {project_root}")
+    print(f"Executing: {' '.join(cmd_test)} in {dbt_dir}")
     
     try:
         result_test = subprocess.run(
             cmd_test,
-            cwd=project_root,
+            cwd=dbt_dir,
             check=True
         )
         print("dbt tests completed successfully.")
@@ -48,3 +49,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
