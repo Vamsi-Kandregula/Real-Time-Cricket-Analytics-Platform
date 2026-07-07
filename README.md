@@ -1,6 +1,12 @@
 # 🏏 Real-Time Cricket Analytics & Telemetry Platform
 
-Welcome to the **Real-Time Cricket Analytics & Telemetry Platform**! This repository hosts the end-to-end serverless data engineering pipeline that pulls live match feeds, cleans them with Spark, models them in Snowflake, and serves them to a beautiful React dashboard.
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)](https://criket-fd.vercel.app)
+[![DBT Core](https://img.shields.io/badge/dbt-v1.8+-orange?style=for-the-badge&logo=dbt)](https://github.com/joyboy123-coder/dbt_cricket)
+[![Databricks](https://img.shields.io/badge/Databricks-Spark-red?style=for-the-badge&logo=databricks)](https://github.com/joyboy123-coder/dbt_cricket/blob/main/scripts/databricks_clean_notebook.py)
+[![Snowflake DWH](https://img.shields.io/badge/Snowflake-DWH-blue?style=for-the-badge&logo=snowflake)](https://github.com/joyboy123-coder/dbt_cricket/blob/main/sql/snowflake_setup.sql)
+[![React 19](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://github.com/joyboy123-coder/Criket-FD)
+
+A premium, production-grade SaaS sports analytics platform that automates live cricket matches data ingestion, processes it on a distributed Spark cluster, builds unified data warehouse schemas with **dbt**, and serves real-time KPIs over an optimized API to a stunning glassmorphic dashboard.
 
 ---
 
@@ -8,15 +14,22 @@ Welcome to the **Real-Time Cricket Analytics & Telemetry Platform**! This reposi
 
 We have deployed the entire stack. You can access the live dashboards and code below:
 
-* **🎨 Frontend UI Website**: [criket-fd.vercel.app](https://criket-fd.vercel.app) *(Source: [`joyboy123-coder/Criket-FD`](https://github.com/joyboy123-coder/Criket-FD))*
-* **⚙️ Backend API Service**: [cricket-bd.vercel.app/api-docs](https://cricket-bd.vercel.app/api-docs) *(Source: [`joyboy123-coder/Cricket-BD`](https://github.com/joyboy123-coder/Cricket-BD))*
-* **🚀 Data Ingestion & Models**: *GitHub Actions Scheduled* *(Source: [`joyboy123-coder/dbt_cricket`](https://github.com/joyboy123-coder/dbt_cricket))*
+| Component | Hosted Deployment URL | Source Code Repository |
+| :--- | :--- | :--- |
+| **🎨 React Frontend UI** | [criket-fd.vercel.app](https://criket-fd.vercel.app) | [joyboy123-coder/Criket-FD](https://github.com/joyboy123-coder/Criket-FD) |
+| **⚙️ Node.js API Backend** | [cricket-bd.vercel.app/api-docs](https://cricket-bd.vercel.app/api-docs) | [joyboy123-coder/Cricket-BD](https://github.com/joyboy123-coder/Cricket-BD) |
+| **🚀 Data Pipeline & DBT** | *Scheduled via GitHub Actions* | [joyboy123-coder/dbt_cricket](https://github.com/joyboy123-coder/dbt_cricket) |
 
 ---
 
-## 🏗️ Pipeline Architecture
+## 📸 Platform Previews
 
-Here is how the data flows from the cricket stadium to your screen:
+### 📊 Main Analytics Dashboard
+![Main Analytics Dashboard](assets/dashboard_preview.png)
+
+---
+
+## 🏗️ System Architecture & Data Telemetry Flow
 
 ```mermaid
 flowchart LR
@@ -46,10 +59,11 @@ flowchart LR
 
 We restructured the folders to keep the code neat and professional:
 
-* **`dbt_project/`** 📊: Contains only the DBT configuration files, macros, and SQL transformation models.
-* **`airflow_dags/`** ⚙️: Contains the local Airflow DAG files for orchestration testing.
+* **`dbt_project/`** 📊: Contains only the DBT configuration files, models, and SQL transformation scripts.
+* **`airflow_dags/`** ⚙️: Contains local Airflow DAG files for orchestration testing.
 * **`scripts/`** 🐍: Contains Python automation scripts for CricAPI fetching, Databricks triggering, Snowflake loading, and DBT execution.
 * **`sql/`** 🗄️: Contains Snowflake SQL files for storage integrations, stages, and raw table schemas.
+* **`assets/`** 🖼️: Directory to store actual application screenshots (Dashboard, Analytics, and Pipeline Monitor).
 * **`.github/workflows/`** 🚀: GitHub Actions workflow file that runs the pipeline serverless every 15 minutes.
 
 ---
@@ -100,6 +114,12 @@ dbt transforms raw records in Snowflake through three clean stages:
   * Built using **React 19**, **Vite 8**, **Tailwind CSS**, and **Framer Motion** (for smooth glassmorphic interface micro-animations).
   * Uses **TanStack React Query** for robust network requests, polling, and auto-retries on database offline warnings.
   * Embeds **Apache ECharts** for premium, clean sports charts and data visualizations.
+
+### 📈 Dynamic Analytics & Data Visualization
+![ECharts Data Visualizations](assets/analytics_charts.png)
+
+### ⚙️ Ingestion Telemetry & Pipeline Monitor
+![Pipeline Telemetry Monitor](assets/pipeline_monitor.png)
 
 ---
 
